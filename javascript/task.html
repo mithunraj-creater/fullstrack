@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(56, 11, 161);
+            color: rgb(172, 8, 8);
+        }
+        form{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+    <h1>login</h1>
+    <label for="email">email:</label>
+    <input id="email" type="text" id="email" placeholder="enter your email" required>
+    <br><br>
+    <label for="password">password</label>
+    <input type="password" type="password" placeholder="enter the password" required maxlength="9">
+    <br><br>
+    <label for="student name">student name </label>
+      <input type="student name" name="student name" id="enter the student name"><br><br>
+      <label for="roll no">roll no</label>
+      <input type="roll no" name="rollno" id="roll no"><br><br>
+    <button type="submit">submit</button>
+    <h1 id="result1"></h1>
+    <h1 id="result2"></h1>
+    </form>
+    <script>
+        document.getElementById("form").addEventListener("submit",function(e){
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            console.log(email,password)
+
+            document.getElementById("result1").textContent=email
+            document.getElementById("result2").textContent=password
+        }
+    </script> 
+</body>
+</html>
